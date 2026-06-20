@@ -17,6 +17,7 @@ export default function Footer() {
       </span>
       <div style={{ display: 'flex', gap: '2rem' }}>
         {[
+          { href: '/about', label: 'About' },
           { href: '/pricing', label: 'Pricing' },
           { href: '/privacy', label: 'Privacy' },
           { href: '/terms', label: 'Terms' },

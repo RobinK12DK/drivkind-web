@@ -75,6 +75,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <p style={{ fontSize: '0.65rem', color: '#555', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
           Business Portal
         </p>
+        <a href="/" className="dash-back-link" style={{ fontSize: '0.72rem', color: '#555', textDecoration: 'none', letterSpacing: '0.06em', display: 'block', marginTop: '0.5rem' }}>
+          ← Back to website
+        </a>
       </div>
 
       <nav style={{ flex: 1 }}>
@@ -127,6 +130,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         @media (min-width: 769px) {
           .dash-topbar { display: none !important; }
         }
+        .dash-back-link:hover { color: #c98a3a !important; }
       `}</style>
 
       {/* Desktop sidebar */}

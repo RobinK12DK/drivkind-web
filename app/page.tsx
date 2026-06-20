@@ -134,6 +134,62 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── CONSUMER: FIND YOUR KIND ────────────────────────── */}
+        <section style={{
+          backgroundColor: '#0d0d0d',
+          backgroundImage: [
+            'linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px)',
+            'linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)',
+          ].join(', '),
+          backgroundSize: '28px 28px',
+          padding: '5rem 2rem',
+        }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.7rem', color: '#c98a3a', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, marginBottom: '1rem' }}>
+              For car enthusiasts
+            </p>
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.03em', marginBottom: '1.25rem', lineHeight: 1.05 }}>
+              Find your kind.
+            </h2>
+            <p style={{ fontSize: '1.05rem', color: '#888', lineHeight: 1.7, maxWidth: 620, margin: '0 auto 2rem' }}>
+              DRIVKIND. is where SA car culture lives. Buy and sell cars, discover builds, join clubs, find events, and connect with people who love cars as much as you do.
+            </p>
+
+            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' as const, marginBottom: '2.5rem' }}>
+              {['4,089 SA vehicle variants', 'Free forever for enthusiasts'].map(pill => (
+                <span key={pill} style={{ backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: 999, padding: '8px 20px', fontSize: '0.8rem', color: '#888' }}>
+                  {pill}
+                </span>
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' as const, marginBottom: '1rem' }}>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '12px', backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: 12, padding: '12px 24px', textDecoration: 'none' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.28.04-2.22-1.32-3.06-2.55C4.75 17 4.1 12.37 5.95 9.87c.93-1.23 2.35-2.01 3.88-2.01 1.49 0 2.34.78 3.53.78 1.18 0 1.89-.77 3.58-.77 1.38.01 2.67.73 3.38 1.97-2.96 1.62-2.48 5.82.39 7.66zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ fontSize: '0.65rem', color: '#555', letterSpacing: '0.04em' }}>Download on the</div>
+                  <div style={{ fontSize: '0.9rem', color: '#f0f0f0', fontWeight: 700, lineHeight: 1.2 }}>App Store</div>
+                </div>
+              </a>
+              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '12px', backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: 12, padding: '12px 24px', textDecoration: 'none' }}>
+                <span style={{ fontSize: '1.4rem', color: '#c98a3a', lineHeight: 1 }}>▶</span>
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ fontSize: '0.65rem', color: '#555', letterSpacing: '0.04em' }}>Get it on</div>
+                  <div style={{ fontSize: '0.9rem', color: '#f0f0f0', fontWeight: 700, lineHeight: 1.2 }}>Google Play</div>
+                </div>
+              </a>
+            </div>
+
+            <p style={{ fontSize: '0.75rem', color: '#555', letterSpacing: '0.04em' }}>
+              iOS and Android — launching 2026
+            </p>
+          </div>
+        </section>
+
+        <div style={{ height: 1, background: 'linear-gradient(to right, transparent, #c98a3a, transparent)', maxWidth: 200, margin: '0 auto' }} />
+
         {/* ── 3. TWO COLUMN PITCH ─────────────────────────────── */}
         <section style={{ backgroundColor: '#0d0d0d', padding: '5rem 2rem' }}>
           <div style={{
