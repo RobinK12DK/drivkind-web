@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import type { User } from '@supabase/supabase-js'
+import Turnstile from '@/components/Turnstile'
 
 const copper = '#c98a3a'
 const muted = '#555555'
@@ -46,6 +47,7 @@ export default function SignupPage() {
   const [step1Errors, setStep1Errors] = useState<Record<string, string>>({})
   const [step1Loading, setStep1Loading] = useState(false)
   const [step1Error, setStep1Error] = useState('')
+  const [captchaToken, setCaptchaToken] = useState('')
 
   // Step 2 fields
   const [businessType, setBusinessType] = useState<'dealer' | 'automotive_business' | ''>('')
@@ -77,7 +79,7 @@ export default function SignupPage() {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: name } },
+      options: { captchaToken, data: { full_name: name } },
     })
 
     if (error) {
@@ -179,19 +181,29 @@ export default function SignupPage() {
                 <FieldError msg={step1Errors.confirmPassword ?? ''} />
               </div>
 
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+                onVerify={(token) => setCaptchaToken(token)}
+              />
+              {!captchaToken && (
+                <p style={{ fontSize: '0.75rem', color: muted, textAlign: 'center', marginTop: '-0.5rem' }}>
+                  Security verification required above
+                </p>
+              )}
+
               {step1Error && (
                 <p style={{ fontSize: '0.82rem', color: '#ef4444', textAlign: 'center' }}>{step1Error}</p>
               )}
 
               <button
                 type="submit"
-                disabled={step1Loading}
+                disabled={step1Loading || !captchaToken}
                 style={{
                   width: '100%', backgroundColor: copper, color: '#0d0d0d',
                   border: 'none', padding: '14px', borderRadius: 999,
                   fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.07em',
-                  textTransform: 'uppercase', cursor: step1Loading ? 'not-allowed' : 'pointer',
-                  fontFamily: 'inherit', marginTop: '0.5rem', opacity: step1Loading ? 0.7 : 1,
+                  textTransform: 'uppercase', cursor: (step1Loading || !captchaToken) ? 'not-allowed' : 'pointer',
+                  fontFamily: 'inherit', marginTop: '0.5rem', opacity: (step1Loading || !captchaToken) ? 0.7 : 1,
                 }}
               >
                 {step1Loading ? 'Creating account...' : 'Continue →'}
