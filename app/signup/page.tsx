@@ -49,11 +49,19 @@ export default function SignupPage() {
     })
     setLoading(false)
     if (error) {
+      console.error('Signup error full object:', JSON.stringify(error), 'status:', (error as any).status, 'code:', (error as any).code)
+      const status = (error as any).status as number | undefined
+      const code = (error as any).code as string | undefined
       const msg = error.message
-      if (!msg || msg === '{}' || msg === '[object Object]') {
-        setError('Signup failed. Please try again in a few minutes.')
-      } else if (msg.toLowerCase().includes('already registered') || msg.toLowerCase().includes('already exists')) {
+
+      if (status === 429 || code === 'over_request_rate_limit') {
+        setError('Too many signup attempts. Please wait a few minutes and try again.')
+      } else if (code === 'email_provider_disabled' || msg?.toLowerCase().includes('disabled')) {
+        setError('Email signup is currently disabled. Please contact support.')
+      } else if (msg?.toLowerCase().includes('already registered') || msg?.toLowerCase().includes('already exists')) {
         setError('An account with this email already exists. Please sign in instead.')
+      } else if (!msg || msg === '{}' || msg === '[object Object]') {
+        setError(`Signup failed (${status ?? 'no status'}). Open browser console for details, or check your Supabase project is active.`)
       } else {
         setError(msg)
       }
