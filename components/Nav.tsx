@@ -6,8 +6,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   const links = [
-    { href: '/pricing#dealers', label: 'For Dealers' },
-    { href: '/pricing#businesses', label: 'For Businesses' },
+    { href: '/pricing', label: 'Pricing' },
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/contact', label: 'Contact' },
   ]

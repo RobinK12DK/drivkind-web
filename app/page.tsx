@@ -50,23 +50,23 @@ export default function HomePage() {
             maxWidth: 1100, margin: '0 auto', width: '100%',
             padding: '0 2rem 5rem',
           }}>
-            <p style={{
-              fontSize: '0.7rem', color: '#c98a3a',
-              letterSpacing: '0.15em', textTransform: 'uppercase',
-              fontWeight: 600, marginBottom: '1.25rem',
-            }}>
-              South Africa&apos;s car culture platform
-            </p>
-
             <h1 style={{
               fontSize: 'clamp(2.5rem, 6vw, 5rem)',
               fontWeight: 900, fontStyle: 'italic',
               color: '#f0f0f0', lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              maxWidth: 820, marginBottom: '1.5rem',
+              maxWidth: 820, marginBottom: '0.75rem',
             }}>
-              Your dealership.<br />The whole country.
+              SA car culture has a new home.
             </h1>
+
+            <p style={{
+              fontSize: '0.7rem', color: '#888',
+              letterSpacing: '0.15em', textTransform: 'uppercase',
+              fontWeight: 600, marginBottom: '1.5rem',
+            }}>
+              South Africa&apos;s car culture platform
+            </p>
 
             <p style={{
               fontSize: '1.1rem', color: '#888',
@@ -119,15 +119,14 @@ export default function HomePage() {
             <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses. Spots are limited.</span>
             <a href="/contact" style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a', textDecoration: 'none', borderBottom: '1px solid #c98a3a', paddingBottom: 1 }}>Reach out →</a>
           </div>
-          <div style={{ backgroundColor: '#111111', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', borderTop: '1px solid #1a1a1a' }}>
+          <div style={{ backgroundColor: '#111111', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid #1a1a1a' }}>
             {[
               { num: '4,089', label: 'SA vehicle variants' },
-              { num: 'R599', label: 'Starting per month' },
-              { num: '10', label: 'Founding partner spots' },
               { num: '0', label: 'Setup fees' },
               { num: '0', label: 'Lock-in contracts' },
+              { num: '24hrs', label: 'Response time' },
             ].map((stat, i) => (
-              <div key={i} style={{ padding: '1.5rem', textAlign: 'center', borderRight: i < 4 ? '1px solid #2a2a2a' : 'none' }}>
+              <div key={i} style={{ padding: '1.5rem', textAlign: 'center', borderRight: i < 3 ? '1px solid #2a2a2a' : 'none' }}>
                 <div style={{ fontSize: '1.75rem', fontWeight: 700, color: '#f0f0f0', marginBottom: '0.25rem' }}>{stat.num}</div>
                 <div style={{ fontSize: '0.72rem', color: '#555', textTransform: 'uppercase' as const, letterSpacing: '0.08em' }}>{stat.label}</div>
               </div>
@@ -329,7 +328,7 @@ export default function HomePage() {
               color: '#f0f0f0', letterSpacing: '-0.02em',
               marginBottom: '1.25rem', lineHeight: 1.1,
             }}>
-              Be one of our first 10 partners.
+              We built the platform SA car culture deserves.
             </h2>
             <p style={{ fontSize: '1rem', color: '#555', lineHeight: 1.75, marginBottom: '2.5rem' }}>
               We&apos;re personally onboarding our first 10 dealers and businesses. If you want to be part of launch, reach out directly.

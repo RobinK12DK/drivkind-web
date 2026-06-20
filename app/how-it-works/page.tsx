@@ -118,6 +118,14 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function HowItWorksPage() {
+  const [activeType, setActiveType] = useState<'dealership' | 'automotive_business'>('dealership')
+
+  const pillBase: React.CSSProperties = {
+    padding: '10px 28px', borderRadius: 999, fontSize: '0.8rem', fontWeight: 600,
+    cursor: 'pointer', textTransform: 'uppercase', letterSpacing: '0.08em',
+    fontFamily: 'inherit', transition: 'all 0.15s',
+  }
+
   return (
     <>
       <Nav />
@@ -140,10 +148,35 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
+        {/* Type toggle */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', padding: '2rem 2rem 0' }}>
+          <button
+            onClick={() => setActiveType('dealership')}
+            style={{
+              ...pillBase,
+              backgroundColor: activeType === 'dealership' ? copper : 'transparent',
+              color: activeType === 'dealership' ? '#0d0d0d' : muted,
+              border: activeType === 'dealership' ? 'none' : `1px solid ${border}`,
+            }}
+          >
+            Dealership
+          </button>
+          <button
+            onClick={() => setActiveType('automotive_business')}
+            style={{
+              ...pillBase,
+              backgroundColor: activeType === 'automotive_business' ? copper : 'transparent',
+              color: activeType === 'automotive_business' ? '#0d0d0d' : muted,
+              border: activeType === 'automotive_business' ? 'none' : `1px solid ${border}`,
+            }}
+          >
+            Automotive Business
+          </button>
+        </div>
+
         {/* Dealers steps */}
-        <section style={{ padding: '4rem 2rem' }}>
+        <section style={{ padding: '3rem 2rem 4rem', display: activeType === 'dealership' ? 'block' : 'none' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <p style={{ fontSize: '0.7rem', color: copper, letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '2.5rem' }}>Dealers</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {dealerSteps.map(s => <Step key={s.num} {...s} />)}
             </div>
@@ -151,9 +184,8 @@ export default function HowItWorksPage() {
         </section>
 
         {/* Businesses steps */}
-        <section style={{ padding: '2rem 2rem 4rem', borderTop: `1px solid ${border}` }}>
+        <section style={{ padding: '3rem 2rem 4rem', display: activeType === 'automotive_business' ? 'block' : 'none' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
-            <p style={{ fontSize: '0.7rem', color: copper, letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '2.5rem', marginTop: '2rem' }}>Businesses</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
               {businessSteps.map(s => <Step key={s.num} {...s} />)}
             </div>
