@@ -144,7 +144,7 @@ export default function SignupPage() {
             <div>
               <label style={labelStyle}>Business type</label>
               <div style={{ display: 'flex', gap: '1rem' }}>
-                {['dealer', 'business'].map(type => (
+                {(['dealer', 'automotive_business'] as const).map(type => (
                   <button key={type} type="button" onClick={() => setBusinessType(type)} style={{ flex: 1, padding: '12px', borderRadius: 999, border: `1px solid ${businessType === type ? copper : border}`, backgroundColor: businessType === type ? copper : 'transparent', color: businessType === type ? '#0d0d0d' : '#888', fontWeight: 600, fontSize: '0.82rem', cursor: 'pointer', textTransform: 'uppercase', letterSpacing: '0.06em', fontFamily: 'inherit' }}>
                     {type === 'dealer' ? 'Dealer' : 'Automotive Business'}
                   </button>
