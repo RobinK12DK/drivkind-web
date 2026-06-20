@@ -51,17 +51,12 @@ export default function SignupPage() {
     if (error) {
       const msg = error.message
       if (!msg || msg === '{}' || msg === '[object Object]') {
-        setError('Signup failed. Too many attempts — please wait a few minutes and try again.')
+        setError('Signup failed. Please try again in a few minutes.')
       } else if (msg.toLowerCase().includes('already registered') || msg.toLowerCase().includes('already exists')) {
         setError('An account with this email already exists. Please sign in instead.')
       } else {
         setError(msg)
       }
-      return
-    }
-    // Supabase silently returns a user with no identities when email is already registered
-    if (data.user && data.user.identities && data.user.identities.length === 0) {
-      setError('An account with this email already exists. Please sign in instead.')
       return
     }
     setStep(2)
