@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import type { User } from '@supabase/supabase-js'
-import Turnstile from '@/components/Turnstile'
+import Turnstile, { TurnstileRef } from '@/components/Turnstile'
 
 const copper = '#c98a3a'
 const muted = '#555555'
@@ -48,6 +48,7 @@ export default function SignupPage() {
   const [step1Loading, setStep1Loading] = useState(false)
   const [step1Error, setStep1Error] = useState('')
   const [captchaToken, setCaptchaToken] = useState('')
+  const turnstileRef = useRef<TurnstileRef>(null)
 
   // Step 2 fields
   const [businessType, setBusinessType] = useState<'dealer' | 'automotive_business' | ''>('')
@@ -84,6 +85,8 @@ export default function SignupPage() {
 
     if (error) {
       setStep1Error(error.message)
+      turnstileRef.current?.reset()
+      setCaptchaToken('')
       setStep1Loading(false)
       return
     }
@@ -182,6 +185,7 @@ export default function SignupPage() {
               </div>
 
               <Turnstile
+                ref={turnstileRef}
                 siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
                 onVerify={(token) => setCaptchaToken(token)}
               />

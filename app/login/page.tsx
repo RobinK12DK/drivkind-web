@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
-import Turnstile from '@/components/Turnstile'
+import Turnstile, { TurnstileRef } from '@/components/Turnstile'
 
 const copper = '#c98a3a'
 const muted = '#555555'
@@ -30,6 +30,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [captchaToken, setCaptchaToken] = useState('')
+  const turnstileRef = useRef<TurnstileRef>(null)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -46,6 +47,8 @@ export default function LoginPage() {
 
     if (error) {
       setError(error.message)
+      turnstileRef.current?.reset()
+      setCaptchaToken('')
       setLoading(false)
       return
     }
@@ -100,6 +103,7 @@ export default function LoginPage() {
           </div>
 
           <Turnstile
+            ref={turnstileRef}
             siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
             onVerify={(token) => setCaptchaToken(token)}
           />
