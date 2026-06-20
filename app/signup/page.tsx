@@ -56,12 +56,16 @@ export default function SignupPage() {
 
       if (status === 429 || code === 'over_request_rate_limit') {
         setError('Too many signup attempts. Please wait a few minutes and try again.')
+      } else if (code === 'unexpected_failure' || msg?.toLowerCase().includes('confirmation email') || msg?.toLowerCase().includes('sending')) {
+        setError('Account created but confirmation email failed to send. Please contact support to activate your account.')
+      } else if (code === 'weak_password' || msg?.toLowerCase().includes('weak') || msg?.toLowerCase().includes('pwned')) {
+        setError('Password is too common or easily guessed. Please choose a stronger password.')
       } else if (code === 'email_provider_disabled' || msg?.toLowerCase().includes('disabled')) {
         setError('Email signup is currently disabled. Please contact support.')
       } else if (msg?.toLowerCase().includes('already registered') || msg?.toLowerCase().includes('already exists')) {
         setError('An account with this email already exists. Please sign in instead.')
       } else if (!msg || msg === '{}' || msg === '[object Object]') {
-        setError(`Signup failed (${status ?? 'no status'}). Open browser console for details, or check your Supabase project is active.`)
+        setError(`Signup failed. Please try again or contact support.`)
       } else {
         setError(msg)
       }
