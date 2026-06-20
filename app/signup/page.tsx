@@ -42,13 +42,28 @@ export default function SignupPage() {
     if (password.length < 10) { setError('Password must be at least 10 characters.'); return }
     if (password !== confirmPassword) { setError('Passwords do not match.'); return }
     setLoading(true)
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { full_name: name } }
     })
     setLoading(false)
-    if (error) { setError(error.message); return }
+    if (error) {
+      const msg = error.message
+      if (!msg || msg === '{}' || msg === '[object Object]') {
+        setError('Signup failed. Too many attempts — please wait a few minutes and try again.')
+      } else if (msg.toLowerCase().includes('already registered') || msg.toLowerCase().includes('already exists')) {
+        setError('An account with this email already exists. Please sign in instead.')
+      } else {
+        setError(msg)
+      }
+      return
+    }
+    // Supabase silently returns a user with no identities when email is already registered
+    if (data.user && data.user.identities && data.user.identities.length === 0) {
+      setError('An account with this email already exists. Please sign in instead.')
+      return
+    }
     setStep(2)
   }
 
