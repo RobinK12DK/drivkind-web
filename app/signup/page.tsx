@@ -1,8 +1,9 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import Turnstile, { TurnstileRef } from '@/components/Turnstile'
 
 export default function SignupPage() {
   const router = useRouter()
@@ -18,6 +19,8 @@ export default function SignupPage() {
   const [province, setProvince] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [captchaToken, setCaptchaToken] = useState('')
+  const turnstileRef = useRef<TurnstileRef>(null)
 
   const copper = '#c98a3a'
   const border = '#2a2a2a'
@@ -45,7 +48,7 @@ export default function SignupPage() {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: name } }
+      options: { captchaToken, data: { full_name: name } }
     })
     setLoading(false)
     if (error) {
@@ -69,6 +72,8 @@ export default function SignupPage() {
       } else {
         setError(msg)
       }
+      turnstileRef.current?.reset()
+      setCaptchaToken('')
       return
     }
     setStep(2)
@@ -117,8 +122,18 @@ export default function SignupPage() {
             <div><label style={labelStyle}>Email</label><input style={inputStyle} type="email" required value={email} onChange={e => setEmail(e.target.value)} /></div>
             <div><label style={labelStyle}>Password (min 10 characters)</label><input style={inputStyle} type="password" required value={password} onChange={e => setPassword(e.target.value)} /></div>
             <div><label style={labelStyle}>Confirm password</label><input style={inputStyle} type="password" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} /></div>
+            <Turnstile
+              ref={turnstileRef}
+              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+              onVerify={(token) => setCaptchaToken(token)}
+            />
+            {!captchaToken && (
+              <p style={{ fontSize: '0.75rem', color: '#555555', textAlign: 'center', marginTop: '-0.5rem' }}>
+                Security verification required above
+              </p>
+            )}
             {error && <p style={{ color: '#ef4444', fontSize: '0.82rem', textAlign: 'center' }}>{error}</p>}
-            <button type="submit" disabled={loading} style={{ width: '100%', backgroundColor: copper, color: '#0d0d0d', border: 'none', padding: '14px', borderRadius: 999, fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.07em', textTransform: 'uppercase', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', marginTop: '0.5rem', opacity: loading ? 0.7 : 1 }}>
+            <button type="submit" disabled={loading || !captchaToken} style={{ width: '100%', backgroundColor: copper, color: '#0d0d0d', border: 'none', padding: '14px', borderRadius: 999, fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.07em', textTransform: 'uppercase', cursor: (loading || !captchaToken) ? 'not-allowed' : 'pointer', fontFamily: 'inherit', marginTop: '0.5rem', opacity: (loading || !captchaToken) ? 0.7 : 1 }}>
               {loading ? 'Creating account...' : 'Continue →'}
             </button>
           </form>

@@ -1,8 +1,9 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import Turnstile, { TurnstileRef } from '@/components/Turnstile'
 
 const copper = '#c98a3a'
 const muted = '#555555'
@@ -28,6 +29,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [captchaToken, setCaptchaToken] = useState('')
+  const turnstileRef = useRef<TurnstileRef>(null)
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -40,10 +43,16 @@ export default function LoginPage() {
     setLoading(true)
     setError('')
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+      options: { captchaToken },
+    })
 
     if (error) {
       setError(error.message)
+      turnstileRef.current?.reset()
+      setCaptchaToken('')
       setLoading(false)
       return
     }
@@ -53,7 +62,6 @@ export default function LoginPage() {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#0d0d0d', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 1rem' }}>
-
       <div style={{
         backgroundColor: '#111111',
         border: `1px solid ${border}`,
@@ -63,7 +71,6 @@ export default function LoginPage() {
         maxWidth: 440,
         marginTop: '15vh',
       }}>
-
         <p style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', marginBottom: '2rem' }}>
           DRIVKIND<span style={{ color: copper }}>.</span>
         </p>
@@ -97,20 +104,32 @@ export default function LoginPage() {
             />
           </div>
 
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+            onVerify={(token) => setCaptchaToken(token)}
+          />
+          {!captchaToken && (
+            <p style={{ fontSize: '0.75rem', color: muted, textAlign: 'center', marginTop: '-0.5rem' }}>
+              Security verification required above
+            </p>
+          )}
+
           {error && (
             <p style={{ fontSize: '0.82rem', color: '#ef4444', textAlign: 'center', margin: 0 }}>{error}</p>
           )}
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !captchaToken}
             style={{
               width: '100%', backgroundColor: copper, color: '#0d0d0d',
               border: 'none', padding: '14px', borderRadius: 999,
               fontWeight: 700, fontSize: '0.875rem',
               letterSpacing: '0.07em', textTransform: 'uppercase',
-              cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit',
-              marginTop: '0.5rem', opacity: loading ? 0.7 : 1,
+              cursor: (loading || !captchaToken) ? 'not-allowed' : 'pointer',
+              fontFamily: 'inherit', marginTop: '0.5rem',
+              opacity: (loading || !captchaToken) ? 0.7 : 1,
             }}
           >
             {loading ? 'Signing in...' : 'Sign in'}
