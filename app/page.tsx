@@ -57,22 +57,14 @@ export default function HomePage() {
               letterSpacing: '-0.03em',
               maxWidth: 820, marginBottom: '0.75rem',
             }}>
-              SA car culture has a new home.
+              Your forecourt. SA&apos;s car community. One platform.
             </h1>
-
-            <p style={{
-              fontSize: '0.7rem', color: '#888',
-              letterSpacing: '0.15em', textTransform: 'uppercase',
-              fontWeight: 600, marginBottom: '1.5rem',
-            }}>
-              South Africa&apos;s car culture platform
-            </p>
 
             <p style={{
               fontSize: '1.1rem', color: '#888',
               maxWidth: 560, lineHeight: 1.65, marginBottom: '2.5rem',
             }}>
-              DRIVKIND. connects dealers and businesses with the car enthusiasts who live and breathe cars. List your stock, build your brand, reach serious buyers.
+              DRIVKIND. connects serious dealers and businesses with the enthusiasts who live and breathe cars. List your stock, build your brand, get found.
             </p>
 
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '2.5rem' }}>
@@ -106,7 +98,7 @@ export default function HomePage() {
                 animation: 'copperPulse 2s ease-in-out infinite',
               }} />
               <span style={{ fontSize: '0.72rem', color: '#c98a3a', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                Launching 2026
+                Launching Q3 2026
               </span>
             </div>
           </div>
@@ -116,14 +108,14 @@ export default function HomePage() {
         <section style={{ borderTop: '1px solid #2a2a2a', borderBottom: '1px solid #2a2a2a' }}>
           <div style={{ backgroundColor: '#111111', padding: '1.25rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' as const, borderBottom: '1px solid #2a2a2a' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a' }}>Now onboarding founding partners</span>
-            <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses. Spots are limited.</span>
+            <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses in Johannesburg, Cape Town, and Durban. Spots are limited.</span>
             <a href="/contact" style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a', textDecoration: 'none', borderBottom: '1px solid #c98a3a', paddingBottom: 1 }}>Reach out →</a>
           </div>
           <div style={{ backgroundColor: '#111111', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid #1a1a1a' }}>
             {[
               { num: '4,089', label: 'SA vehicle variants' },
-              { num: '0', label: 'Setup fees' },
-              { num: '0', label: 'Lock-in contracts' },
+              { num: 'No', label: 'setup fees' },
+              { num: 'No', label: 'lock-in contracts' },
               { num: '24hrs', label: 'Response time' },
             ].map((stat, i) => (
               <div key={i} style={{ padding: '1.5rem', textAlign: 'center', borderRight: i < 3 ? '1px solid #2a2a2a' : 'none' }}>
@@ -329,6 +321,58 @@ export default function HomePage() {
                     {title}
                   </h3>
                   <p style={{ fontSize: '0.855rem', color: '#555', lineHeight: 1.75 }}>
+                    {body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4b. WHY NOW? ────────────────────────────────────── */}
+        <section style={{
+          backgroundColor: '#111111',
+          borderTop: '1px solid #2a2a2a',
+          padding: '5rem 2rem',
+        }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <p style={{ fontSize: '0.7rem', color: '#c98a3a', letterSpacing: '0.15em', textTransform: 'uppercase' as const, fontWeight: 600, marginBottom: '1rem' }}>
+                Why DRIVKIND. now
+              </p>
+              <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+                AutoTrader lists cars. We build community.
+              </h2>
+            </div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '2rem',
+            }}>
+              {[
+                {
+                  label: 'AutoTrader is a classifieds relic.',
+                  body: "It was built to list cars, not connect people. There's no community, no culture, no reason for an enthusiast to keep coming back. It's a transaction engine — and that's all it will ever be.",
+                },
+                {
+                  label: 'Instagram is noise.',
+                  body: "Your stock gets buried in reels, your reach is throttled unless you pay, and the algorithm doesn't care about SA car culture. You're building someone else's platform for free.",
+                },
+                {
+                  label: 'DRIVKIND. is built for this.',
+                  body: 'A marketplace, a community, and a map — all in one place. Built specifically for South African car culture. The enthusiasts you want to reach are already here.',
+                },
+              ].map(({ label, body }) => (
+                <div key={label} style={{
+                  backgroundColor: '#1a1a1a',
+                  border: '1px solid #2a2a2a',
+                  borderRadius: 16,
+                  padding: '2rem',
+                }}>
+                  <p style={{ fontSize: '1rem', fontWeight: 700, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '0.75rem', lineHeight: 1.3 }}>
+                    {label}
+                  </p>
+                  <p style={{ fontSize: '0.875rem', color: '#555', lineHeight: 1.75 }}>
                     {body}
                   </p>
                 </div>

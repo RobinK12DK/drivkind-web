@@ -112,17 +112,6 @@ export default function AboutPage() {
               }}>
                 For dealers and businesses
               </Link>
-              <a href="#" style={{
-                border: `1px solid ${border}`,
-                color: '#f0f0f0',
-                padding: '14px 28px', borderRadius: 999,
-                fontWeight: 600, fontSize: '0.82rem',
-                textDecoration: 'none', letterSpacing: '0.07em',
-                textTransform: 'uppercase',
-                backgroundColor: 'transparent',
-              }}>
-                Download the app
-              </a>
             </div>
           </div>
         </section>

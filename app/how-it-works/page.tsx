@@ -96,23 +96,10 @@ function Step({ num, title, body }: { num: string; title: string; body: string }
 }
 
 function FAQItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false)
   return (
-    <div style={{ borderBottom: `1px solid ${border}` }}>
-      <button
-        onClick={() => setOpen(!open)}
-        style={{
-          width: '100%', textAlign: 'left', background: 'none', border: 'none',
-          padding: '1.25rem 0', cursor: 'pointer', fontFamily: 'inherit',
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem',
-        }}
-      >
-        <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#f0f0f0', lineHeight: 1.4 }}>{q}</span>
-        <span style={{ color: copper, fontSize: '1.2rem', flexShrink: 0, transition: 'transform 0.2s', transform: open ? 'rotate(45deg)' : 'none' }}>+</span>
-      </button>
-      {open && (
-        <p style={{ fontSize: '0.875rem', color: muted, lineHeight: 1.75, paddingBottom: '1.25rem' }}>{a}</p>
-      )}
+    <div style={{ borderBottom: `1px solid ${border}`, padding: '1.5rem 0' }}>
+      <p style={{ fontSize: '0.95rem', fontWeight: 600, color: '#f0f0f0', lineHeight: 1.4, marginBottom: '0.75rem' }}>{q}</p>
+      <p style={{ fontSize: '0.875rem', color: muted, lineHeight: 1.75 }}>{a}</p>
     </div>
   )
 }
