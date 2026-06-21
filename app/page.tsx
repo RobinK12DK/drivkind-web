@@ -1,7 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function HomePage() {
   return (
@@ -203,14 +202,12 @@ export default function HomePage() {
                     border: '3px solid #2a2a2a',
                     borderRadius: 40,
                     overflow: 'hidden',
-                    position: 'relative',
                     height: 420,
                   }}>
-                    <Image
+                    <img
                       src={src}
                       alt={caption}
-                      fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                   <p style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.75rem' }}>{caption}</p>
