@@ -34,11 +34,8 @@ export default function AboutPage() {
               color: '#f0f0f0', letterSpacing: '-0.03em',
               lineHeight: 1.05, marginBottom: '1.25rem',
             }}>
-              Built by a car person,<br />for car people.
+              Built for SA car culture. By someone who lives it.
             </h1>
-            <p style={{ fontSize: '1.1rem', color: muted, lineHeight: 1.7 }}>
-              DRIVKIND. started with a Golf 3 GTI and a frustration.
-            </p>
           </div>
         </section>
 
@@ -48,34 +45,36 @@ export default function AboutPage() {
 
             {[
               {
-                heading: 'The gap',
-                body: 'South Africa has one of the most passionate car cultures in the world. Lowriders in Mitchells Plain. Stance crews in Soweto. Track days in Kyalami. Concours d\'Elegance in Franschhoek. We show up. We build. We live it. But there was no platform built for us. AutoTrader lists cars like a classifieds directory. Instagram is too noisy. Facebook groups are a mess. WhatsApp groups forget everything. We deserved better.',
+                heading: '',
+                body: 'South Africa has one of the most passionate car cultures in the world. We build. We show up. We live it. DRIVKIND. is the platform that was missing — one place for the community to buy, sell, connect, and belong.',
               },
               {
                 heading: 'Who built this',
-                body: 'Robin Kley. Car guy. Johannesburg. Currently restoring a 1998 Volkswagen Golf 3 GTI — Build Thread #1 on DRIVKIND. Built this platform alone, from scratch, because he couldn\'t find what he was looking for and decided to build it himself.',
+                body: "Robin Kley. Car person. Johannesburg. Currently restoring a 1998 Volkswagen Golf 3 GTI — Build Thread #1 on DRIVKIND. Built this platform from scratch because the right one didn't exist.",
+              },
+              {
+                heading: 'For dealers and businesses',
+                body: "DRIVKIND. puts your brand in front of a community that already cares about cars. Not a general audience. Not passive scrollers. Enthusiasts — people who research, discuss, and buy. We built the tools to help you reach them, build your following, and grow.",
               },
               {
                 heading: 'The mission',
-                body: 'DRIVKIND. is not an app. It\'s a home. For the MK1 hunter. The daily driver. The weekend warrior. The detailer who treats every car like a work of art. The dealer who knows every car on his lot by name. We built the platform SA car culture deserves — and we\'re just getting started.',
-              },
-              {
-                heading: 'Why DRIVKIND.',
-                body: 'Find your kind. It\'s that simple. Car people are a kind. A tribe. Whether you\'re into JDM, German, American muscle, SA classics, or anything that moves — there\'s a kind for you here. The period is deliberate. DRIVKIND. is a statement, not just a name.',
+                body: 'A platform SA car culture actually deserves. Community-first. Built here. Launching 2026.',
               },
             ].map(({ heading, body }, i) => (
-              <div key={heading} style={{
+              <div key={i} style={{
                 borderLeft: `2px solid ${border}`,
                 paddingLeft: '2rem',
                 marginBottom: i < 3 ? '3.5rem' : 0,
               }}>
-                <p style={{
-                  fontSize: '0.68rem', color: copper,
-                  letterSpacing: '0.14em', textTransform: 'uppercase',
-                  fontWeight: 700, marginBottom: '0.75rem',
-                }}>
-                  {heading}
-                </p>
+                {heading && (
+                  <p style={{
+                    fontSize: '0.68rem', color: copper,
+                    letterSpacing: '0.14em', textTransform: 'uppercase',
+                    fontWeight: 700, marginBottom: '0.75rem',
+                  }}>
+                    {heading}
+                  </p>
+                )}
                 <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>
                   {body}
                 </p>

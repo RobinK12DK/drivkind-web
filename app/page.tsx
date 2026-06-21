@@ -98,7 +98,7 @@ export default function HomePage() {
                 animation: 'copperPulse 2s ease-in-out infinite',
               }} />
               <span style={{ fontSize: '0.72rem', color: '#c98a3a', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                Launching Q3 2026
+                Launching 2026
               </span>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
         <section style={{ borderTop: '1px solid #2a2a2a', borderBottom: '1px solid #2a2a2a' }}>
           <div style={{ backgroundColor: '#111111', padding: '1.25rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' as const, borderBottom: '1px solid #2a2a2a' }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a' }}>Now onboarding founding partners</span>
-            <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses in Johannesburg, Cape Town, and Durban. Spots are limited.</span>
+            <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses. Spots are limited.</span>
             <a href="/contact" style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a', textDecoration: 'none', borderBottom: '1px solid #c98a3a', paddingBottom: 1 }}>Reach out →</a>
           </div>
           <div style={{ backgroundColor: '#111111', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid #1a1a1a' }}>
