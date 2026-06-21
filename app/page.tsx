@@ -64,7 +64,7 @@ export default function HomePage() {
               fontSize: '1.1rem', color: '#888',
               maxWidth: 560, lineHeight: 1.65, marginBottom: '2rem',
             }}>
-              DRIVKIND. gives dealers and businesses direct access to South Africa&apos;s most passionate car buyers. List your stock. Build your brand. Get found. R599/month.
+              The platform SA car culture has been waiting for. Built for dealers, businesses, and enthusiasts who live and breathe cars.
             </p>
 
             <div style={{ marginBottom: '1rem' }}>
