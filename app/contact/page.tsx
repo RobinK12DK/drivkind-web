@@ -61,16 +61,8 @@ export default function ContactPage() {
                   <a href="mailto:robin@drivkind.co.za" style={{ fontSize: '1rem', color: copper, textDecoration: 'none', fontWeight: 600 }}>robin@drivkind.co.za</a>
                 </div>
                 <div>
-                  <p style={{ fontSize: '0.68rem', color: muted, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Phone</p>
-                  <p style={{ fontSize: '1rem', color: '#f0f0f0' }}>071 836 0010</p>
-                </div>
-                <div>
                   <p style={{ fontSize: '0.68rem', color: muted, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>Instagram</p>
                   <a href="https://instagram.com/drivkind.sa" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1rem', color: copper, textDecoration: 'none', fontWeight: 600 }}>@drivkind.sa</a>
-                </div>
-                <div>
-                  <p style={{ fontSize: '0.68rem', color: muted, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.25rem' }}>WhatsApp</p>
-                  <a href="https://wa.me/27718360010" target="_blank" rel="noopener noreferrer" style={{ fontSize: '1rem', color: copper, textDecoration: 'none', fontWeight: 600 }}>071 836 0010</a>
                 </div>
                 <p style={{ fontSize: '0.85rem', color: muted }}>Based in Johannesburg, South Africa.</p>
               </div>
@@ -153,8 +145,7 @@ export default function ContactPage() {
                 </button>
 
                 <p style={{ fontSize: '0.75rem', color: '#3a3a3a', textAlign: 'center' }}>
-                  We&apos;ll respond within 24 hours. No spam, ever.<br />
-                  Prefer WhatsApp? Message 071 836 0010 — we respond fast.
+                  We&apos;ll respond within 24 hours. No spam, ever.
                 </p>
               </form>
 
