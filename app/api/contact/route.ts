@@ -5,20 +5,17 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, businessName, type, plan, message } = await request.json()
+    const { name, email, type, message } = await request.json()
 
     await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'robin@drivkind.co.za',
       replyTo: email,
-      subject: `New DRIVKIND. Enquiry — ${businessName || name}`,
+      subject: `New DRIVKIND. Enquiry — ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
-        `Phone: ${phone || 'Not provided'}`,
-        `Business / Dealership: ${businessName || 'Not provided'}`,
         `Type: ${type || 'Not provided'}`,
-        `Plan interested in: ${plan || 'Not provided'}`,
         ``,
         `Message:`,
         message,

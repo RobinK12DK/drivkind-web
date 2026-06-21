@@ -57,18 +57,19 @@ export default function HomePage() {
               letterSpacing: '-0.03em',
               maxWidth: 820, marginBottom: '0.75rem',
             }}>
-              Your forecourt. SA&apos;s car community. One platform.
+              SA car culture. One platform.
             </h1>
 
             <p style={{
               fontSize: '1.1rem', color: '#888',
-              maxWidth: 560, lineHeight: 1.65, marginBottom: '2.5rem',
+              maxWidth: 560, lineHeight: 1.65, marginBottom: '2rem',
             }}>
-              DRIVKIND. connects serious dealers and businesses with the enthusiasts who live and breathe cars. List your stock, build your brand, get found.
+              DRIVKIND. gives dealers and businesses direct access to South Africa&apos;s most passionate car buyers. List your stock. Build your brand. Get found. R599/month.
             </p>
 
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ marginBottom: '1rem' }}>
               <Link href="/contact" style={{
+                display: 'inline-block',
                 backgroundColor: '#c98a3a', color: '#0d0d0d',
                 padding: '14px 28px', borderRadius: 999,
                 fontWeight: 700, fontSize: '0.82rem',
@@ -77,18 +78,16 @@ export default function HomePage() {
               }}>
                 Get Started
               </Link>
-              <Link href="/pricing" style={{
-                border: '1px solid rgba(255,255,255,0.15)',
-                color: '#f0f0f0',
-                padding: '14px 28px', borderRadius: 999,
-                fontWeight: 600, fontSize: '0.82rem',
-                textDecoration: 'none', letterSpacing: '0.07em',
-                textTransform: 'uppercase',
-                backgroundColor: 'transparent',
-              }}>
-                See Pricing
-              </Link>
             </div>
+            <Link href="/pricing" style={{
+              display: 'block', fontSize: '0.82rem', color: '#c98a3a',
+              textDecoration: 'none', letterSpacing: '0.04em', marginBottom: '1.75rem',
+            }}>
+              See pricing →
+            </Link>
+            <p style={{ fontSize: '0.72rem', color: '#888', marginBottom: '2.5rem' }}>
+              Registered SA business&nbsp;&nbsp;·&nbsp;&nbsp;No setup fees&nbsp;&nbsp;·&nbsp;&nbsp;Personal onboarding included
+            </p>
 
             {/* Launch indicator */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -200,9 +199,12 @@ export default function HomePage() {
               <p style={{ fontSize: '0.68rem', color: '#c98a3a', letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>
                 For Dealers
               </p>
-              <h2 style={{ fontSize: '1.75rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '1rem', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '0.5rem', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
                 Your stock. SA&apos;s most passionate car buyers. R599/month.
               </h2>
+              <p style={{ fontSize: '0.78rem', color: '#555', marginBottom: '1.25rem' }}>
+                Cancel anytime. No lock-in. Set up in under 10 minutes.
+              </p>
               <p style={{ fontSize: '0.875rem', color: '#888', lineHeight: 1.75, marginBottom: '2rem' }}>
                 List your full stock, choose which vehicles get promoted into the app marketplace, and reach serious car buyers across South Africa. Track views, enquiries, and watchlists from your dashboard.
               </p>
@@ -329,6 +331,58 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── 4b. THE OPPORTUNITY ─────────────────────────────── */}
+        <section style={{
+          backgroundColor: '#111111',
+          borderTop: '1px solid #2a2a2a',
+          padding: '5rem 2rem',
+        }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <p style={{ fontSize: '0.7rem', color: '#c98a3a', letterSpacing: '0.15em', textTransform: 'uppercase' as const, fontWeight: 600, marginBottom: '1rem' }}>
+                The opportunity
+              </p>
+              <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+                SA car culture has never been more active. Now it has a home.
+              </h2>
+            </div>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '2rem',
+            }}>
+              {[
+                {
+                  heading: 'A community that shows up.',
+                  body: 'Car meets. Track days. Concours. The SA car scene is alive and growing. DRIVKIND. is where that energy lives online — and where your brand gets seen.',
+                },
+                {
+                  heading: 'Buyers who already care.',
+                  body: 'Every person on DRIVKIND. is there because they love cars. Not casual browsers. Not tyre-kickers. Enthusiasts who research, discuss, and buy.',
+                },
+                {
+                  heading: 'Built for SA. Only for SA.',
+                  body: '4,089 SA vehicle variants. Local makes, local culture, local community. No global platform understands this market the way we do.',
+                },
+              ].map(({ heading, body }) => (
+                <div key={heading} style={{
+                  backgroundColor: '#1a1a1a',
+                  border: '1px solid #2a2a2a',
+                  borderRadius: 16,
+                  padding: '2rem',
+                }}>
+                  <p style={{ fontSize: '1rem', fontWeight: 700, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '0.75rem', lineHeight: 1.3 }}>
+                    {heading}
+                  </p>
+                  <p style={{ fontSize: '0.875rem', color: '#555', lineHeight: 1.75 }}>
+                    {body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── 5. PRICING TEASER ───────────────────────────────── */}
         <section style={{
           backgroundColor: '#111111',
@@ -397,10 +451,22 @@ export default function HomePage() {
               textDecoration: 'underline',
               textDecorationColor: 'rgba(201,138,58,0.35)',
               textUnderlineOffset: 5,
-              marginBottom: '1rem',
+              marginBottom: '1.5rem',
             }}>
               robin@drivkind.co.za
             </a>
+            <div style={{ marginBottom: '1.5rem' }}>
+              <Link href="/contact" style={{
+                display: 'inline-block',
+                backgroundColor: '#c98a3a', color: '#0d0d0d',
+                padding: '14px 32px', borderRadius: 999,
+                fontWeight: 700, fontSize: '0.82rem',
+                textDecoration: 'none', letterSpacing: '0.07em',
+                textTransform: 'uppercase',
+              }}>
+                Get in touch →
+              </Link>
+            </div>
             <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.65 }}>
               Every founding partner gets a personal onboarding call. We set everything up for you.
             </p>

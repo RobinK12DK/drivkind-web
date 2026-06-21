@@ -63,6 +63,9 @@ function PlanCard({
       }}>
         {cta}
       </Link>
+      <p style={{ fontSize: '0.72rem', color: muted, textAlign: 'center', marginTop: '0.75rem' }}>
+        No setup fee. Cancel anytime.
+      </p>
     </div>
   )
 }
@@ -106,6 +109,9 @@ function FlagshipCard({
       }}>
         {cta}
       </Link>
+      <p style={{ fontSize: '0.72rem', color: muted, marginTop: '0.75rem' }}>
+        No setup fee. Cancel anytime.
+      </p>
     </div>
   )
 }

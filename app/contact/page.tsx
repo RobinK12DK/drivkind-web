@@ -23,10 +23,7 @@ const inputStyle: React.CSSProperties = {
 export default function ContactPage() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [businessName, setBusinessName] = useState('')
   const [type, setType] = useState('')
-  const [plan, setPlan] = useState('')
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -44,7 +41,7 @@ export default function ContactPage() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, businessName, type, plan, message }),
+        body: JSON.stringify({ name, email, type, message }),
       })
       const data = await res.json()
       if (!res.ok || data.error) throw new Error(data.error || 'Failed')
@@ -142,38 +139,11 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.75rem', color: muted, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Phone</label>
-                    <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} style={inputStyle} />
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.75rem', color: muted, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Business / Dealership name</label>
-                    <input type="text" value={businessName} onChange={e => setBusinessName(e.target.value)} style={inputStyle} />
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.75rem', color: muted, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Type</label>
-                    <div style={{ display: 'flex', gap: '2rem' }}>
-                      {['Dealer', 'Business'].map(opt => (
-                        <label key={opt} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: '#f0f0f0', cursor: 'pointer' }}>
-                          <input type="radio" name="type" value={opt.toLowerCase()} checked={type === opt.toLowerCase()} onChange={e => setType(e.target.value)} style={{ accentColor: copper }} />
-                          {opt}
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.75rem', color: muted, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Plan interested in</label>
-                    <select value={plan} onChange={e => setPlan(e.target.value)} style={{ ...inputStyle, cursor: 'pointer' }}>
-                      <option value="">Select a plan…</option>
-                      <option value="forecourt">Forecourt (R599)</option>
-                      <option value="showroom">Showroom (R999)</option>
-                      <option value="flagship">Flagship (R1,999)</option>
-                      <option value="essentials">Essentials (R599)</option>
-                      <option value="pro">Pro (R999)</option>
-                      <option value="premium">Premium (R1,999)</option>
-                      <option value="unsure">Not sure yet</option>
+                    <label style={{ display: 'block', fontSize: '0.75rem', color: muted, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>I am a</label>
+                    <select value={type} onChange={e => setType(e.target.value)} style={{ ...inputStyle, cursor: 'pointer' }}>
+                      <option value="">Select…</option>
+                      <option value="dealer">Dealer</option>
+                      <option value="business">Automotive business</option>
                     </select>
                   </div>
 
