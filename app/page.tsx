@@ -201,7 +201,7 @@ export default function HomePage() {
                 For Dealers
               </p>
               <h2 style={{ fontSize: '1.75rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '1rem', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                Your digital forecourt.
+                Your stock. SA&apos;s most passionate car buyers. R599/month.
               </h2>
               <p style={{ fontSize: '0.875rem', color: '#888', lineHeight: 1.75, marginBottom: '2rem' }}>
                 List your full stock, choose which vehicles get promoted into the app marketplace, and reach serious car buyers across South Africa. Track views, enquiries, and watchlists from your dashboard.
@@ -411,9 +411,18 @@ export default function HomePage() {
           }}>
             View full pricing →
           </Link>
-          <p style={{ fontSize: '0.75rem', color: '#3a3a3a', letterSpacing: '0.04em' }}>
-            No setup fees. No lock-in contracts. Cancel anytime.
-          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' as const }}>
+            {['No setup fees', 'No lock-in contracts', 'Cancel anytime'].map(item => (
+              <span key={item} style={{
+                fontSize: '0.75rem', color: '#c98a3a',
+                border: '1px solid rgba(201,138,58,0.35)',
+                borderRadius: 999,
+                padding: '6px 16px',
+                fontWeight: 600,
+                letterSpacing: '0.04em',
+              }}>{item}</span>
+            ))}
+          </div>
         </section>
 
         {/* ── 6. EARLY ACCESS / CONTACT ───────────────────────── */}
@@ -444,6 +453,9 @@ export default function HomePage() {
             }}>
               robin@drivkind.co.za
             </a>
+            <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.65 }}>
+              Every founding partner gets a personal onboarding call. We set everything up for you.
+            </p>
 
           </div>
         </section>

@@ -180,6 +180,7 @@ export default function PricingPage() {
                   '1 culture feed post per month',
                   'Verified dealer badge',
                   'Email enquiry notifications',
+                  'Personal onboarding call (founding partners only)',
                 ]}
                 cta="Get started"
                 ctaHref="/contact"
@@ -198,6 +199,7 @@ export default function PricingPage() {
                   'Performance dashboard — views, watchlists, enquiries',
                   'Bulk stock upload',
                   'Gold verified badge',
+                  'Personal onboarding call (founding partners only)',
                 ]}
                 cta="Get started"
                 ctaHref="/contact"
@@ -219,6 +221,7 @@ export default function PricingPage() {
                 'Dedicated onboarding call with Robin personally',
                 'API access for DMS stock feed integration',
                 'Gold verified badge + priority support',
+                'Personal onboarding call (founding partners only)',
               ]}
               cta="Talk to us"
               ctaHref="/contact"
@@ -247,6 +250,7 @@ export default function PricingPage() {
                   '3 culture feed posts per month',
                   'Verified business badge',
                   'Email enquiry notifications',
+                  'Personal onboarding call (founding partners only)',
                 ]}
                 cta="Get started"
                 ctaHref="/contact"
@@ -264,6 +268,7 @@ export default function PricingPage() {
                   'Special offers card on your profile',
                   'Performance dashboard — profile views, directions taps, post reach',
                   'Gold verified badge',
+                  'Personal onboarding call (founding partners only)',
                 ]}
                 cta="Get started"
                 ctaHref="/contact"
@@ -284,6 +289,7 @@ export default function PricingPage() {
                 'Full analytics',
                 'Dedicated onboarding call with Robin personally',
                 'Gold verified badge + priority support',
+                'Personal onboarding call (founding partners only)',
               ]}
               cta="Talk to us"
               ctaHref="/contact"
