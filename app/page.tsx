@@ -179,44 +179,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── APP SCREENSHOTS ──────────────────────────────────── */}
-        <section style={{ backgroundColor: '#0d0d0d', padding: '5rem 2rem' }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <p style={{ fontSize: '0.7rem', color: '#c98a3a', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 600, marginBottom: '1rem' }}>
-                Inside the app
-              </p>
-              <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-                See what you&apos;re joining.
-              </h2>
-            </div>
-            <div className="screenshots-grid">
-              {[
-                { src: '/app-marketplace.png', caption: 'Cars for Sale' },
-                { src: '/app-map.png', caption: 'Map — find cars & services' },
-                { src: '/app-feed.png', caption: 'Culture Feed' },
-                { src: '/app-profile.png', caption: 'Your Profile' },
-              ].map(({ src, caption }) => (
-                <div key={src} style={{ textAlign: 'center' }}>
-                  <div style={{
-                    border: '3px solid #2a2a2a',
-                    borderRadius: 40,
-                    overflow: 'hidden',
-                    height: 420,
-                  }}>
-                    <img
-                      src={src}
-                      alt={caption}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
-                  <p style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.75rem' }}>{caption}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <div style={{ height: 1, background: 'linear-gradient(to right, transparent, #c98a3a, transparent)', maxWidth: 200, margin: '0 auto' }} />
 
         {/* ── 3. TWO COLUMN PITCH ─────────────────────────────── */}
@@ -520,15 +482,6 @@ export default function HomePage() {
         @keyframes copperPulse {
           0%, 100% { opacity: 1; transform: scale(1); }
           50%       { opacity: 0.45; transform: scale(0.8); }
-        }
-        .screenshots-grid {
-          display: grid;
-          gap: 1.5rem;
-          grid-template-columns: repeat(2, 1fr);
-          align-items: start;
-        }
-        @media (min-width: 769px) {
-          .screenshots-grid { grid-template-columns: repeat(4, 1fr); }
         }
       `}</style>
     </>
