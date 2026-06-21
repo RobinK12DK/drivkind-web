@@ -400,9 +400,7 @@ export default function HomePage() {
             }}>
               robin@drivkind.co.za
             </a>
-            <p style={{ fontSize: '0.85rem', color: '#444' }}>
-              Or call 071 836 0010
-            </p>
+
           </div>
         </section>
 
