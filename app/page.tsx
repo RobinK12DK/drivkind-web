@@ -329,58 +329,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── 4b. WHY NOW? ────────────────────────────────────── */}
-        <section style={{
-          backgroundColor: '#111111',
-          borderTop: '1px solid #2a2a2a',
-          padding: '5rem 2rem',
-        }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-              <p style={{ fontSize: '0.7rem', color: '#c98a3a', letterSpacing: '0.15em', textTransform: 'uppercase' as const, fontWeight: 600, marginBottom: '1rem' }}>
-                Why DRIVKIND. now
-              </p>
-              <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-                AutoTrader lists cars. We build community.
-              </h2>
-            </div>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '2rem',
-            }}>
-              {[
-                {
-                  label: 'AutoTrader is a classifieds relic.',
-                  body: "It was built to list cars, not connect people. There's no community, no culture, no reason for an enthusiast to keep coming back. It's a transaction engine — and that's all it will ever be.",
-                },
-                {
-                  label: 'Instagram is noise.',
-                  body: "Your stock gets buried in reels, your reach is throttled unless you pay, and the algorithm doesn't care about SA car culture. You're building someone else's platform for free.",
-                },
-                {
-                  label: 'DRIVKIND. is built for this.',
-                  body: 'A marketplace, a community, and a map — all in one place. Built specifically for South African car culture. The enthusiasts you want to reach are already here.',
-                },
-              ].map(({ label, body }) => (
-                <div key={label} style={{
-                  backgroundColor: '#1a1a1a',
-                  border: '1px solid #2a2a2a',
-                  borderRadius: 16,
-                  padding: '2rem',
-                }}>
-                  <p style={{ fontSize: '1rem', fontWeight: 700, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '0.75rem', lineHeight: 1.3 }}>
-                    {label}
-                  </p>
-                  <p style={{ fontSize: '0.875rem', color: '#555', lineHeight: 1.75 }}>
-                    {body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── 5. PRICING TEASER ───────────────────────────────── */}
         <section style={{
           backgroundColor: '#111111',
