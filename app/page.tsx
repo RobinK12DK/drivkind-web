@@ -378,7 +378,7 @@ export default function HomePage() {
             Transparent pricing. No surprises.
           </h2>
           <p style={{ fontSize: '1rem', color: '#555', marginBottom: '2.5rem' }}>
-            Two plans for dealers. Two plans for businesses. Starting at R599/month.
+            Three plans for dealers. Three plans for businesses. Starting at R599/month.
           </p>
           <Link href="/pricing" style={{
             display: 'inline-block',

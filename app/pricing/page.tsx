@@ -136,7 +136,7 @@ export default function PricingPage() {
               The right plan for your business.
             </h1>
             <p style={{ fontSize: '1rem', color: muted, lineHeight: 1.7 }}>
-              Two tiers for dealers. Two tiers for businesses. No setup fees. No lock-in. Cancel anytime.
+              Three plans for dealers. Three plans for businesses. No setup fees. No lock-in. Cancel anytime.
             </p>
           </div>
         </section>
