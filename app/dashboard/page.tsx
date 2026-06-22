@@ -129,7 +129,7 @@ export default function DashboardPage() {
             Welcome to DRIVKIND. 👋
           </h2>
           <p style={{ fontSize: '0.875rem', color: muted, lineHeight: 1.7, marginBottom: '1.25rem', maxWidth: 480 }}>
-            Let&apos;s get your dealership set up. Complete your profile, then start uploading your stock.
+            Start by completing your profile. Once that&apos;s done, add your stock and choose which vehicles go live in the marketplace.
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
             <Link href="/dashboard/profile" style={{
@@ -208,7 +208,7 @@ export default function DashboardPage() {
 
       {/* Quick actions */}
       <div>
-        <h2 style={{ fontSize: '1rem', fontWeight: 700, color: '#f0f0f0', marginBottom: '1rem' }}>Quick actions</h2>
+        <h2 style={{ fontSize: '1rem', fontWeight: 700, color: '#f0f0f0', marginBottom: '1rem' }}>Get started</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
           {[
             { label: 'Add vehicle', href: '/dashboard/stock/new', badge: null },

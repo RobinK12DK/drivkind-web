@@ -34,7 +34,7 @@ export default function BillingPage() {
           Billing
         </h1>
         <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 560 }}>
-          Manage your DRIVKIND. subscription.
+          Your current plan and billing details.
         </p>
 
         {/* Current plan */}
@@ -70,10 +70,11 @@ export default function BillingPage() {
             Upgrade or manage billing
           </p>
           <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7 }}>
-            To upgrade your plan or manage billing, contact{' '}
+            Reach out to{' '}
             <a href="mailto:robin@drivkind.co.za" style={{ color: copper, textDecoration: 'none', fontWeight: 600 }}>
               robin@drivkind.co.za
             </a>
+            {' '}and we&apos;ll sort it out.
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function EnquiriesPage() {
           Enquiries
         </h1>
         <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 560 }}>
-          Messages from potential buyers about your listings.
+          Messages from people interested in your stock.
         </p>
 
         <div style={{
@@ -23,7 +23,7 @@ export default function EnquiriesPage() {
             Coming soon
           </p>
           <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7 }}>
-            Enquiry notifications are coming soon. For now, buyers can reach you via the contact details on your profile.
+            Enquiry notifications are coming soon. In the meantime, buyers can reach you directly using the contact details on your profile.
           </p>
         </div>
       </div>

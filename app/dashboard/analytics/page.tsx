@@ -12,7 +12,7 @@ export default function AnalyticsPage() {
           Analytics
         </h1>
         <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 560 }}>
-          Track views, watchlists, and enquiries across your listings.
+          See which listings are getting attention and where your enquiries are coming from.
         </p>
 
         <div style={{
@@ -23,7 +23,7 @@ export default function AnalyticsPage() {
             Coming soon
           </p>
           <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7 }}>
-            Analytics dashboard is coming soon.
+            This is coming soon. You&apos;ll be able to see views, saves, and enquiries across all your listings in one place.
           </p>
         </div>
       </div>

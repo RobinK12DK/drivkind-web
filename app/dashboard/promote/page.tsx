@@ -13,7 +13,7 @@ export default function PromotePage() {
           Promote listings
         </h1>
         <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 560 }}>
-          Choose which vehicles from your stock get promoted into the DRIVKIND. marketplace — what buyers actually browse. Your tier determines how many promotion slots you have.
+          Choose which vehicles go live in the marketplace. Your plan determines how many slots you have.
         </p>
 
         <div style={{
@@ -24,11 +24,11 @@ export default function PromotePage() {
             Coming soon
           </p>
           <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.7 }}>
-            This feature is launching soon. In the meantime, contact{' '}
+            This is launching soon. Until then, email{' '}
             <a href="mailto:robin@drivkind.co.za" style={{ color: copper, textDecoration: 'none', fontWeight: 600 }}>
               robin@drivkind.co.za
-            </a>{' '}
-            to manually promote your listings.
+            </a>
+            {' '}and we&apos;ll get your listings in front of buyers manually.
           </p>
         </div>
       </div>

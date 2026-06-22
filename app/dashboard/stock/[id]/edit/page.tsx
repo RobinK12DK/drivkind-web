@@ -19,8 +19,9 @@ export default function EditVehiclePage() {
             Coming soon
           </p>
           <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.7 }}>
-            Vehicle editing is coming soon. To update a listing, delete it and re-add it, or contact{' '}
-            <a href="mailto:robin@drivkind.co.za" style={{ color: '#c98a3a', textDecoration: 'none' }}>robin@drivkind.co.za</a>.
+            Full editing is coming soon. For now, email{' '}
+            <a href="mailto:robin@drivkind.co.za" style={{ color: '#c98a3a', textDecoration: 'none' }}>robin@drivkind.co.za</a>
+            {' '}and we&apos;ll update the listing for you.
           </p>
         </div>
       </div>

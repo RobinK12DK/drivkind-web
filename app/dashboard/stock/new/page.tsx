@@ -218,10 +218,10 @@ export default function NewVehiclePage() {
             borderRadius: 16, padding: '2.5rem',
           }}>
             <h1 style={{ fontSize: '1.35rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', letterSpacing: '-0.02em', marginBottom: '1rem' }}>
-              Ready to reach more buyers?
+              Want to list more stock?
             </h1>
             <p style={{ fontSize: '0.9rem', color: muted, lineHeight: 1.75, marginBottom: '2rem' }}>
-              You&apos;ve used your free listing. Upgrade to Forecourt (R599/month) to add up to 20 vehicles and get promoted in the DRIVKIND. marketplace.
+              You&apos;ve used your free listing. Upgrade to Forecourt to add up to 20 vehicles and get your stock in front of serious buyers. R599/month. No lock-in.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
               <Link href="/dashboard/billing" style={{
@@ -229,7 +229,7 @@ export default function NewVehiclePage() {
                 textDecoration: 'none', fontWeight: 700, fontSize: '0.82rem',
                 letterSpacing: '0.06em', textTransform: 'uppercase',
               }}>
-                Upgrade to Forecourt — R599/month
+                Upgrade to Forecourt
               </Link>
               <Link href="/dashboard/stock" style={{
                 border: `1px solid ${border}`, color: '#f0f0f0', padding: '12px 22px', borderRadius: 999,
