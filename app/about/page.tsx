@@ -53,12 +53,12 @@ export default function AboutPage() {
               <p style={{ fontSize: '0.68rem', color: copper, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>
                 For the community
               </p>
-              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>We spend weekends in workshops, garages, and at car shows. We share advice, chase parts, document our builds, and help each other solve problems.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>We spend weekends in workshops, garages, and at meets.</p>
               <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>We build. We drive. We show up.</p>
               <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>DRIVKIND. is bringing it all together in one place.</p>
               <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>Buy and sell cars and parts. Share your builds. Discover events. Connect with other enthusiasts.</p>
               <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>For dealers, workshops, brands, and service providers, DRIVKIND. offers direct access to a community that already cares.</p>
-              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>Our community is made up of owners, builders, collectors, racers, detailers, mechanics, and enthusiasts.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>Whether you own, build, collect, race, detail, or simply love cars, there&apos;s a place for you here.</p>
             </div>
 
             <div style={{ borderLeft: `2px solid ${border}`, paddingLeft: '2rem' }}>
@@ -100,7 +100,7 @@ export default function AboutPage() {
               }}>
                 For dealers and businesses
               </Link>
-              <Link href="#" style={{
+              <Link href="/contact" style={{
                 backgroundColor: 'transparent', color: '#f0f0f0',
                 border: '1px solid #f0f0f0',
                 padding: '14px 28px', borderRadius: 999,
