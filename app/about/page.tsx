@@ -34,7 +34,7 @@ export default function AboutPage() {
               color: '#f0f0f0', letterSpacing: '-0.03em',
               lineHeight: 1.05, marginBottom: '1.25rem',
             }}>
-              Built for SA car culture. By someone who lives it.
+              About DRIVKIND.
             </h1>
           </div>
         </section>
@@ -43,43 +43,32 @@ export default function AboutPage() {
         <section style={{ backgroundColor: '#0d0d0d', padding: '4rem 2rem' }}>
           <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
-            {[
-              {
-                heading: '',
-                body: 'South Africa has one of the most passionate car cultures in the world. We build. We show up. We live it. DRIVKIND. is the platform that was missing — one place for the community to buy, sell, connect, and belong.',
-              },
-              {
-                heading: 'Who built this',
-                body: "Robin Kley. Car person. Johannesburg. Currently restoring a 1998 Volkswagen Golf 3 GTI — Build Thread #1 on DRIVKIND. Built this platform from scratch because the right one didn't exist.",
-              },
-              {
-                heading: 'For dealers and businesses',
-                body: "DRIVKIND. puts your brand in front of a community that already cares about cars. Not a general audience. Not passive scrollers. Enthusiasts — people who research, discuss, and buy. We built the tools to help you reach them, build your following, and grow.",
-              },
-              {
-                heading: 'The mission',
-                body: 'A platform SA car culture actually deserves. Community-first. Built here. Launching 2026.',
-              },
-            ].map(({ heading, body }, i) => (
-              <div key={i} style={{
-                borderLeft: `2px solid ${border}`,
-                paddingLeft: '2rem',
-                marginBottom: i < 3 ? '3.5rem' : 0,
-              }}>
-                {heading && (
-                  <p style={{
-                    fontSize: '0.68rem', color: copper,
-                    letterSpacing: '0.14em', textTransform: 'uppercase',
-                    fontWeight: 700, marginBottom: '0.75rem',
-                  }}>
-                    {heading}
-                  </p>
-                )}
-                <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>
-                  {body}
-                </p>
-              </div>
-            ))}
+            <div style={{ borderLeft: `2px solid ${border}`, paddingLeft: '2rem', marginBottom: '3.5rem' }}>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>
+                South Africa has one of the most passionate car communities in the world.
+              </p>
+            </div>
+
+            <div style={{ borderLeft: `2px solid ${border}`, paddingLeft: '2rem', marginBottom: '3.5rem' }}>
+              <p style={{ fontSize: '0.68rem', color: copper, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>
+                For the community
+              </p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>We spend weekends in workshops, garages, and at car shows. We share advice, chase parts, document our builds, and help each other solve problems.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>We build. We drive. We show up.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>DRIVKIND. is bringing it all together in one place.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>Buy and sell cars and parts. Share your builds. Discover events. Connect with other enthusiasts.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>For dealers, workshops, brands, and service providers, DRIVKIND. offers direct access to a community that already cares.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>Our community is made up of owners, builders, collectors, racers, detailers, mechanics, and enthusiasts.</p>
+            </div>
+
+            <div style={{ borderLeft: `2px solid ${border}`, paddingLeft: '2rem' }}>
+              <p style={{ fontSize: '0.68rem', color: copper, letterSpacing: '0.14em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>
+                The mission
+              </p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>Our mission is simple.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85, marginBottom: '1rem' }}>To build the platform South African car culture deserves.</p>
+              <p style={{ fontSize: '1rem', color: '#aaa', lineHeight: 1.85 }}>Built in South Africa. Launching in 2026.</p>
+            </div>
 
           </div>
         </section>
