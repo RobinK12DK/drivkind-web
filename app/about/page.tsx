@@ -100,6 +100,16 @@ export default function AboutPage() {
               }}>
                 For dealers and businesses
               </Link>
+              <Link href="#" style={{
+                backgroundColor: 'transparent', color: '#f0f0f0',
+                border: '1px solid #f0f0f0',
+                padding: '14px 28px', borderRadius: 999,
+                fontWeight: 700, fontSize: '0.82rem',
+                textDecoration: 'none', letterSpacing: '0.07em',
+                textTransform: 'uppercase',
+              }}>
+                Join the community
+              </Link>
             </div>
           </div>
         </section>
