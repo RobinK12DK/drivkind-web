@@ -139,7 +139,7 @@ export default function LoginPage() {
         <p style={{ fontSize: '0.82rem', color: muted, textAlign: 'center', marginTop: '1.5rem' }}>
           New to DRIVKIND.?{' '}
           <Link href="/signup" style={{ color: copper, textDecoration: 'none', fontWeight: 600 }}>
-            Create your account →
+            Create your account
           </Link>
         </p>
 

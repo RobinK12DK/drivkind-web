@@ -83,7 +83,7 @@ export default function HomePage() {
               display: 'block', fontSize: '0.82rem', color: '#c98a3a',
               textDecoration: 'none', letterSpacing: '0.04em', marginBottom: '1.75rem',
             }}>
-              See pricing →
+              See pricing
             </Link>
             <p style={{ fontSize: '0.72rem', color: '#888', marginBottom: '2.5rem' }}>
               Registered SA business&nbsp;&nbsp;·&nbsp;&nbsp;No setup fees&nbsp;&nbsp;·&nbsp;&nbsp;Personal onboarding included
@@ -100,28 +100,6 @@ export default function HomePage() {
                 Launching 2026
               </span>
             </div>
-          </div>
-        </section>
-
-        {/* ── 2. SOCIAL PROOF BAR ─────────────────────────────── */}
-        <section style={{ borderTop: '1px solid #2a2a2a', borderBottom: '1px solid #2a2a2a' }}>
-          <div style={{ backgroundColor: '#111111', padding: '1.25rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' as const, borderBottom: '1px solid #2a2a2a' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a' }}>Now onboarding founding partners</span>
-            <span style={{ fontSize: '0.85rem', color: '#555' }}>— we&apos;re personally setting up our first 10 dealers and businesses. Spots are limited.</span>
-            <a href="/contact" style={{ fontSize: '0.85rem', fontWeight: 600, color: '#c98a3a', textDecoration: 'none', borderBottom: '1px solid #c98a3a', paddingBottom: 1 }}>Reach out →</a>
-          </div>
-          <div style={{ backgroundColor: '#111111', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid #1a1a1a' }}>
-            {[
-              { num: '4,089', label: 'SA vehicle variants' },
-              { num: 'No', label: 'setup fees' },
-              { num: 'No', label: 'lock-in contracts' },
-              { num: '24hrs', label: 'Response time' },
-            ].map((stat, i) => (
-              <div key={i} style={{ padding: '1.5rem', textAlign: 'center', borderRight: i < 3 ? '1px solid #2a2a2a' : 'none' }}>
-                <div style={{ fontSize: '1.75rem', fontWeight: 700, color: '#f0f0f0', marginBottom: '0.25rem' }}>{stat.num}</div>
-                <div style={{ fontSize: '0.72rem', color: '#555', textTransform: 'uppercase' as const, letterSpacing: '0.08em' }}>{stat.label}</div>
-              </div>
-            ))}
           </div>
         </section>
 
@@ -224,7 +202,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <Link href="/pricing#dealers" style={{ fontSize: '0.8rem', color: '#c98a3a', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.04em' }}>
-                See dealer pricing →
+                See dealer pricing
               </Link>
             </div>
 
@@ -259,7 +237,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <Link href="/pricing#businesses" style={{ fontSize: '0.8rem', color: '#c98a3a', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.04em' }}>
-                See business pricing →
+                See business pricing
               </Link>
             </div>
           </div>
@@ -411,7 +389,7 @@ export default function HomePage() {
             textTransform: 'uppercase',
             marginBottom: '1.75rem',
           }}>
-            View full pricing →
+            View full pricing
           </Link>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' as const }}>
             {['No setup fees', 'No lock-in contracts', 'Cancel anytime'].map(item => (
@@ -464,7 +442,7 @@ export default function HomePage() {
                 textDecoration: 'none', letterSpacing: '0.07em',
                 textTransform: 'uppercase',
               }}>
-                Get in touch →
+                Get in touch
               </Link>
             </div>
             <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.65 }}>

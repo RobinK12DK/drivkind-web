@@ -134,7 +134,7 @@ export default function SignupPage() {
             )}
             {error && <p style={{ color: '#ef4444', fontSize: '0.82rem', textAlign: 'center' }}>{error}</p>}
             <button type="submit" disabled={loading || !captchaToken} style={{ width: '100%', backgroundColor: copper, color: '#0d0d0d', border: 'none', padding: '14px', borderRadius: 999, fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.07em', textTransform: 'uppercase', cursor: (loading || !captchaToken) ? 'not-allowed' : 'pointer', fontFamily: 'inherit', marginTop: '0.5rem', opacity: (loading || !captchaToken) ? 0.7 : 1 }}>
-              {loading ? 'Creating account...' : 'Continue →'}
+              {loading ? 'Creating account...' : 'Continue'}
             </button>
           </form>
         )}
@@ -163,7 +163,7 @@ export default function SignupPage() {
             </div>
             {error && <p style={{ color: '#ef4444', fontSize: '0.82rem', textAlign: 'center' }}>{error}</p>}
             <button type="submit" disabled={loading} style={{ width: '100%', backgroundColor: copper, color: '#0d0d0d', border: 'none', padding: '14px', borderRadius: 999, fontWeight: 700, fontSize: '0.875rem', letterSpacing: '0.07em', textTransform: 'uppercase', cursor: loading ? 'not-allowed' : 'pointer', fontFamily: 'inherit', marginTop: '0.5rem', opacity: loading ? 0.7 : 1 }}>
-              {loading ? 'Setting up...' : 'Complete setup →'}
+              {loading ? 'Setting up...' : 'Complete setup'}
             </button>
             <button type="button" onClick={() => setStep(1)} style={{ background: 'none', border: 'none', color: muted, fontSize: '0.82rem', cursor: 'pointer', textAlign: 'center', fontFamily: 'inherit' }}>← Back</button>
           </form>
@@ -171,7 +171,7 @@ export default function SignupPage() {
 
         <p style={{ fontSize: '0.82rem', color: muted, textAlign: 'center', marginTop: '1.5rem' }}>
           Already have an account?{' '}
-          <Link href="/login" style={{ color: copper, textDecoration: 'none', fontWeight: 600 }}>Sign in →</Link>
+          <Link href="/login" style={{ color: copper, textDecoration: 'none', fontWeight: 600 }}>Sign in</Link>
         </p>
       </div>
       <style>{`input:focus, select:focus { border-color: #c98a3a !important; outline: none !important; }`}</style>

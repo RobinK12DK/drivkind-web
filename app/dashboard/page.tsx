@@ -136,14 +136,14 @@ export default function DashboardPage() {
               backgroundColor: copper, color: '#0d0d0d', padding: '10px 20px', borderRadius: 999,
               textDecoration: 'none', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.06em', textTransform: 'uppercase',
             }}>
-              Complete my profile →
+              Complete my profile
             </Link>
             <Link href="/dashboard/stock/new" style={{
               border: `1px solid ${copper}`, color: copper, padding: '10px 20px', borderRadius: 999,
               textDecoration: 'none', fontWeight: 600, fontSize: '0.8rem', letterSpacing: '0.06em', textTransform: 'uppercase',
               backgroundColor: 'transparent',
             }}>
-              Upload first vehicle →
+              Upload first vehicle
             </Link>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function DashboardPage() {
       <div style={{ marginBottom: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
           <h2 style={{ fontSize: '1rem', fontWeight: 700, color: '#f0f0f0' }}>Recent stock</h2>
-          <Link href="/dashboard/stock" style={{ fontSize: '0.8rem', color: copper, textDecoration: 'none', fontWeight: 600 }}>View all →</Link>
+          <Link href="/dashboard/stock" style={{ fontSize: '0.8rem', color: copper, textDecoration: 'none', fontWeight: 600 }}>View all</Link>
         </div>
 
         {!loading && recentStock.length === 0 ? (

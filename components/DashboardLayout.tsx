@@ -113,7 +113,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           onClick={handleSignOut}
           style={{ background: 'none', border: 'none', color: '#555', fontSize: '0.8rem', cursor: 'pointer', padding: 0, fontFamily: 'inherit' }}
         >
-          Sign out →
+          Sign out
         </button>
       </div>
     </div>
