@@ -21,12 +21,12 @@ const dealerSteps = [
   {
     num: '03',
     title: 'Choose your promoted listings',
-    body: 'From your stock, select which vehicles get promoted into the DRIVKIND. marketplace — what buyers actually browse. Your tier determines how many slots you have.',
+    body: 'Choose which vehicles go live in the marketplace. That\'s what the community browses. Your plan determines how many slots you have.',
   },
   {
     num: '04',
     title: 'Post culture content',
-    body: 'Use our feed post templates to share content about your stock and culture. No pricing in posts, no listing links — pure culture. This builds your following in the community.',
+    body: 'Share your latest stock, projects, and updates. No pricing in posts, no listing links. Just the kind of content the community actually wants to see.',
   },
 ]
 
@@ -49,7 +49,7 @@ const businessSteps = [
   {
     num: '04',
     title: 'Post culture content and special offers',
-    body: 'Use the feed to share culture content and post monthly special offers directly on your profile. Build a following. Be part of the community.',
+    body: 'Share your work and post special offers directly on your profile. Showing up consistently is how the community gets to know your business.',
   },
 ]
 

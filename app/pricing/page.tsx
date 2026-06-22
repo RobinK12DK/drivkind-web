@@ -170,7 +170,7 @@ export default function PricingPage() {
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
             <p style={{ fontSize: '0.7rem', color: copper, letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>For Dealers</p>
             <p style={{ fontSize: '1rem', color: muted, marginBottom: '2.5rem', maxWidth: 560, lineHeight: 1.7 }}>
-              List your stock, get promoted in the marketplace, and reach serious car buyers across South Africa.
+              List your stock, reach serious buyers, and become part of the SA car community.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
@@ -195,14 +195,14 @@ export default function PricingPage() {
                 name="Showroom"
                 price="R999"
                 tag="Grow faster"
-                desc="For the dealer serious about reach and performance."
+                desc="For the dealer who wants to move more stock and reach more buyers."
                 features={[
                   'Everything in Forecourt',
                   '50 active stock listings',
                   '10 promoted listings in the marketplace',
                   '3 culture feed posts per month',
                   'Priority placement in search results',
-                  'Performance dashboard — views, watchlists, enquiries',
+                  'See which listings are getting views, saves, and enquiries',
                   'Bulk stock upload',
                   'Gold verified badge',
                   'Personal onboarding call (founding partners only)',
@@ -216,14 +216,14 @@ export default function PricingPage() {
               name="Flagship"
               price="R1,999"
               tag="For serious operations"
-              desc="For franchise dealers and multi-branch operations who want maximum reach and full analytics."
+              desc="For franchise dealers and multi-branch operations who need scale, stock control, and serious reach."
               features={[
                 'Everything in Showroom',
                 'Unlimited active stock listings',
                 '25 promoted listings in the marketplace',
                 'Unlimited culture feed posts',
-                'Featured dealer slot on Discover screen',
-                'Full analytics + benchmarking vs other dealers',
+                'Featured on the Discover section. Shown where enthusiasts find what\'s new.',
+                'Detailed reporting. See how your listings perform against other dealers.',
                 'Dedicated onboarding call with Robin personally',
                 'API access for DMS stock feed integration',
                 'Gold verified badge + priority support',
@@ -240,7 +240,7 @@ export default function PricingPage() {
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
             <p style={{ fontSize: '0.7rem', color: copper, letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.75rem' }}>For Businesses</p>
             <p style={{ fontSize: '1rem', color: muted, marginBottom: '2.5rem', maxWidth: 620, lineHeight: 1.7 }}>
-              Workshops, detailers, parts suppliers, fitment centres, paint shops — get in front of the enthusiasts who need your services.
+              Workshops, detailers, parts suppliers, fitment centres, paint shops. The enthusiasts who need your services are already here.
             </p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
@@ -269,7 +269,7 @@ export default function PricingPage() {
                 features={[
                   'Everything in Essentials',
                   '8 culture feed posts per month',
-                  'Featured in category searches (e.g. detailers near me)',
+                  'Get found first when enthusiasts search for your category nearby',
                   'Promoted pin on map (visually distinct)',
                   'Special offers card on your profile',
                   'Performance dashboard — profile views, directions taps, post reach',
@@ -289,8 +289,8 @@ export default function PricingPage() {
               features={[
                 'Everything in Pro',
                 'Unlimited culture feed posts',
-                'Homepage feature slot on Discover screen',
-                'Event sponsorship listing (your brand on community events)',
+                'Featured on the Discover section. Shown where enthusiasts find what\'s new.',
+                'Your business listed alongside community events on the platform',
                 'Monthly feature in Hot Right Now section',
                 'Full analytics',
                 'Dedicated onboarding call with Robin personally',

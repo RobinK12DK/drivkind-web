@@ -64,7 +64,7 @@ export default function HomePage() {
               fontSize: '1.1rem', color: '#888',
               maxWidth: 560, lineHeight: 1.65, marginBottom: '2rem',
             }}>
-              The platform SA car culture has been waiting for. Built for dealers, businesses, and enthusiasts who live and breathe cars.
+              Built for the people who build, drive, and live South African car culture.
             </p>
 
             <div style={{ marginBottom: '1rem' }}>
@@ -143,7 +143,7 @@ export default function HomePage() {
               Find your kind.
             </h2>
             <p style={{ fontSize: '1.05rem', color: '#888', lineHeight: 1.7, maxWidth: 620, margin: '0 auto 2rem' }}>
-              DRIVKIND. is where SA car culture lives. Buy and sell cars, discover builds, join clubs, find events, and connect with people who love cars as much as you do.
+              DRIVKIND. is where SA car culture lives. Buy and sell cars and parts. Share your build. Find events. Connect with other enthusiasts.
             </p>
 
             <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' as const, marginBottom: '2.5rem' }}>
@@ -206,15 +206,15 @@ export default function HomePage() {
                 Cancel anytime. No lock-in. Set up in under 10 minutes.
               </p>
               <p style={{ fontSize: '0.875rem', color: '#888', lineHeight: 1.75, marginBottom: '2rem' }}>
-                List your full stock, choose which vehicles get promoted into the app marketplace, and reach serious car buyers across South Africa. Track views, enquiries, and watchlists from your dashboard.
+                List your stock. Choose which vehicles go live in the marketplace. See who&apos;s watching, who&apos;s enquiring, and follow up from one place.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                 {[
-                  'Pin on the map with your dealership profile',
-                  'Stock management — upload unlimited vehicles',
-                  'Promoted marketplace listings (tier-dependent)',
-                  'Culture feed posts (template-based)',
-                  'Performance dashboard and analytics',
+                  'Your dealership on the map, with a full profile',
+                  'Upload your stock. No limits on most plans.',
+                  'Promote the vehicles you want buyers to see',
+                  'Share your latest stock and updates with the community',
+                  'See who’s viewed, saved, and enquired on your listings',
                   'Verified dealer badge',
                 ].map((f, i) => (
                   <li key={i} style={{ fontSize: '0.855rem', color: '#ccc', display: 'flex', gap: '0.75rem', alignItems: 'flex-start', lineHeight: 1.5 }}>
@@ -245,11 +245,11 @@ export default function HomePage() {
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
                 {[
-                  'Pin on the map with your business profile',
+                  'Your business on the map, with a full profile',
                   'Listed in the Business Directory',
-                  'Culture feed posts to build your following',
-                  'Promoted placement in category searches',
-                  'Special offers card on your profile',
+                  'Share your work, projects, and specials with the community',
+                  'Get found when enthusiasts search for your services nearby',
+                  'Post special offers directly on your profile',
                   'Verified business badge',
                 ].map((f, i) => (
                   <li key={i} style={{ fontSize: '0.855rem', color: '#ccc', display: 'flex', gap: '0.75rem', alignItems: 'flex-start', lineHeight: 1.5 }}>
@@ -354,11 +354,11 @@ export default function HomePage() {
               {[
                 {
                   heading: 'A community that shows up.',
-                  body: 'Car meets. Track days. Concours. The SA car scene is alive and growing. DRIVKIND. is where that energy lives online — and where your brand gets seen.',
+                  body: 'Car meets. Track days. Concours. The SA car scene is alive and growing. DRIVKIND. is where it all comes together online.',
                 },
                 {
                   heading: 'Buyers who already care.',
-                  body: 'Every person on DRIVKIND. is there because they love cars. Not casual browsers. Not tyre-kickers. Enthusiasts who research, discuss, and buy.',
+                  body: 'Everyone on DRIVKIND. is here on purpose. They came looking for something specific. People who research, talk about cars, and buy when they find the right one.',
                 },
                 {
                   heading: 'Built for SA. Only for SA.',
@@ -442,7 +442,7 @@ export default function HomePage() {
               We built the platform SA car culture deserves.
             </h2>
             <p style={{ fontSize: '1rem', color: '#555', lineHeight: 1.75, marginBottom: '2.5rem' }}>
-              We&apos;re personally onboarding our first 10 dealers and businesses. If you want to be part of launch, reach out directly.
+              We&apos;re personally setting up our first 10 dealers and businesses. Reach out directly if you want to be part of it.
             </p>
             <a href="mailto:robin@drivkind.co.za" style={{
               display: 'block',
