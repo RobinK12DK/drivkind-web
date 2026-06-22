@@ -27,6 +27,7 @@ export default function HomePage() {
             backgroundSize: 'cover',
             backgroundPosition: 'center 60%',
             zIndex: 0,
+            animation: 'heroZoom 12s ease-in-out infinite alternate',
           }} />
           {/* Gradient overlay */}
           <div style={{
@@ -460,6 +461,10 @@ export default function HomePage() {
         @keyframes copperPulse {
           0%, 100% { opacity: 1; transform: scale(1); }
           50%       { opacity: 0.45; transform: scale(0.8); }
+        }
+        @keyframes heroZoom {
+          from { transform: scale(1); }
+          to   { transform: scale(1.08); }
         }
       `}</style>
     </>
