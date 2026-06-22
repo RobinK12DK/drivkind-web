@@ -200,7 +200,7 @@ export default function HomePage() {
                 For Dealers
               </p>
               <h2 style={{ fontSize: '1.75rem', fontWeight: 800, fontStyle: 'italic', color: '#f0f0f0', marginBottom: '0.5rem', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                Your stock. SA&apos;s most passionate car buyers. R599/month.
+                Your stock. SA&apos;s most passionate car buyers.
               </h2>
               <p style={{ fontSize: '0.78rem', color: '#555', marginBottom: '1.25rem' }}>
                 Cancel anytime. No lock-in. Set up in under 10 minutes.
